@@ -1,6 +1,8 @@
 var time = dayjs();
+var hour = time.format("h:mmA");
+console.log(hour);
 
-$("#currentDay").text(time.format("dddd, MMM D, YYYY"));
+$("#currentDay").text(time.format("dddd, MMM D, YYYY [at] h:mmA"));
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
