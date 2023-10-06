@@ -9,3 +9,4 @@ Module 5 - A project containing a fully dynamic work scheduler.
 - https://day.js.org/docs/en/display/format
 - https://www.w3schools.com/js/js_arrow_function.asp
 - https://www.w3schools.com/jsref/jsref_foreach.asp
+- https://www.w3schools.com/jquery/jquery_events.asp
