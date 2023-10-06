@@ -6,7 +6,7 @@ console.log(hour);
 
 //JQUERY Version to save notes for each time.
 var nine = $("#9");
-$("button").on("click", function () {
+$("#9amBtn").on("click", function () {
   localStorage.setItem("9AM", nine.val());
 });
 $("#9").append(localStorage.getItem("9AM"));
