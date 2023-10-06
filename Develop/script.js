@@ -2,6 +2,7 @@
 // var buttons = document.querySelectorAll(".btn");
 var time = dayjs();
 var hour = time.format("h:mmA");
+console.log(hour);
 
 //JQUERY Version to save notes for each time.
 var nine = $("#9");
@@ -10,7 +11,53 @@ $("button").on("click", function () {
 });
 $("#9").append(localStorage.getItem("9AM"));
 
-console.log(hour);
+var ten = $("#10");
+$("button").on("click", function () {
+  localStorage.setItem("10AM", ten.val());
+});
+$("#10").append(localStorage.getItem("10AM"));
+
+var eleven = $("#11");
+$("button").on("click", function () {
+  localStorage.setItem("11AM", eleven.val());
+});
+$("#11").append(localStorage.getItem("11AM"));
+
+var twelve = $("#12");
+$("button").on("click", function () {
+  localStorage.setItem("12PM", twelve.val());
+});
+$("#12").append(localStorage.getItem("12PM"));
+
+var one = $("#1");
+$("button").on("click", function () {
+  localStorage.setItem("1PM", one.val());
+});
+$("#1").append(localStorage.getItem("1PM"));
+
+var two = $("#2");
+$("button").on("click", function () {
+  localStorage.setItem("2PM", two.val());
+});
+$("#2").append(localStorage.getItem("2PM"));
+
+var three = $("#3");
+$("button").on("click", function () {
+  localStorage.setItem("3PM", three.val());
+});
+$("#3").append(localStorage.getItem("3PM"));
+
+var four = $("#4");
+$("button").on("click", function () {
+  localStorage.setItem("4PM", four.val());
+});
+$("#4").append(localStorage.getItem("4PM"));
+
+var five = $("#5");
+$("button").on("click", function () {
+  localStorage.setItem("5PM", five.val());
+});
+$("#5").append(localStorage.getItem("5PM"));
 
 //Have to call getNotes() function in order for the value to shown on page when we refresh page.
 // getNotes();
