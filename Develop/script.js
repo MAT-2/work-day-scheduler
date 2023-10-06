@@ -1,12 +1,32 @@
+var noteInput = document.querySelector("#textBox");
+var buttons = document.querySelectorAll(".btn");
 var time = dayjs();
 var hour = time.format("h:mmA");
+
 console.log(hour);
 
-var buttons = document.querySelectorAll(".btn");
+//Have to call getNotes() function in order for the value to shown on page when we refresh page.
+getNotes();
 
+function getNotes() {
+  var note = localStorage.getItem("note");
+  if (!note) {
+    return;
+  }
+
+  noteInput.textContent = note;
+}
+//When a button is clicked, a variable called note will take the value of the ID of #textbox, the first textarea element.
+//Then, a localStorage needs to be set with a specified key to be stored in, and value that is associated.
+//Our value is going to be called from our variable note, since it will take any input from the textarea.
+//We then call the previous function getNotes(), since it will go into the note key, and take the value frpm it and display it using noteInput.textContent directly into the textarea element.
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    console.log("Button Clicked!");
+    var note = noteInput.value;
+    localStorage.setItem("note", note);
+    getNotes();
+    alert("Notes Saved!");
+    console.log(localStorage.getItem("note"));
   });
 });
 
