@@ -22,3 +22,5 @@ Refer to LICENSE
 - https://www.w3schools.com/jquery/jquery_events.asp
 
 ## Screenshots
+
+![Alt text](image.png)
